@@ -1,6 +1,6 @@
 import java.util.*;
 
-// Kelas generik Product<T> yang menyimpan data produk
+// Generic class Product<T> yg menyimpan data produk
 class Product<T extends Comparable<T>> implements Comparable<Product<T>> {
     private int id;             // ID produk
     private String name;        // Nama produk
@@ -36,7 +36,7 @@ class Product<T extends Comparable<T>> implements Comparable<Product<T>> {
         return this.category.compareTo(other.category);
     }
 
-    // Menampilkan data produk secara ringkas
+    // Menampilkan data produk 
     @Override
     public String toString() {
         return "ID: " + id + ", Nama: " + name + ", Kategori: " + category + ", Harga: " + price;
